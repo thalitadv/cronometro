@@ -1,0 +1,112 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100%;
+    background: linear-gradient(150deg, #151518, #0b0813);
+}
+
+#timer {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    height: 400px;
+    width: 400px;
+    border-radius: 100%;
+    background-color: rgb(16, 17, 19);
+    font-weight: 600px;
+    font-size: 29px;
+    color: #ececec;
+    margin-bottom: 6rem;
+    padding: 4rem;
+    font-size: 50px; 
+}
+
+
+#timer::before, #timer::after {
+    content: '';
+    position: absolute;
+    border-radius: 100%;
+    width: calc(100% + 10px);
+    height: calc(100% + 10px);
+    background: linear-gradient(45deg, var(--cor-principal, #716bbd), var(--cor-secundaria, #113770));
+    background-size: 300%;
+    z-index: -1;   
+    animation: borderMotion 5s linear infinite;
+}
+
+#timer::after {
+    filter: blur(10px)
+}
+
+
+@keyframes borderMotion {
+    0% {
+        background-position: 0;
+    }
+    100% {
+        background-position: 300%;
+    }
+}
+
+#borderColor {
+    position: absolute;
+    top: 15px;
+    right: 10px;
+    width: 60px; 
+    height: 45px; 
+    border: none; 
+    background: none; 
+    cursor: pointer;
+}
+
+#actions {
+    display: flex;
+    gap: 0.5rem;
+}
+
+#actions button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 75px;
+    height: 75px;
+    padding: .6rem;
+    font-size: 1rem;
+    border-radius: 10px;
+    border: none;
+    background-color: #e0dbdb;
+    color: #151518;
+    cursor: pointer;
+    transition: background-color .2s ease-in;
+}
+
+#actions { 
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+#actions button:hover {
+    background-color: #bbb7ec;
+}
+
+#marks-list{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 0.7rem;
+    color: #a3b3e7;
+}
+
+#marks-list p:first-child {
+    margin-top: 1.8rem;
+}
