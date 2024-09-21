@@ -99,5 +99,5 @@ document.getElementById('borderColor').addEventListener('input', function() {
 
     // Definir a nova cor da borda
     timer.style.setProperty('--cor-principal', selectedColor);
-    timer.style.setProperty('--cor-secundaria', '#113770');
+    timer.style.setProperty('--cor-secundaria', '#5c2ab8');
 });
