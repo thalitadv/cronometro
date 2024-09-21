@@ -20,9 +20,3 @@ Este cronômetro foi desenvolvido utilizando HTML, CSS e JavaScript. É uma ferr
 O cronômetro está pronto para uso e pode ser testado diretamente no navegador. Você pode modificar a cor da borda e utilizar todas as funcionalidades mencionadas.
 
 Acesse por aqui: https://thalitadv.github.io/cronometro/
-
-## Como Usar
-
-1. Clone o repositório ou baixe os arquivos.
-2. Abra o arquivo `index.html` em seu navegador.
-3. Utilize os botões para controlar o cronômetro e experimente as funcionalidades!
