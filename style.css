@@ -19,12 +19,10 @@ body {
     position: relative;
     justify-content: center;
     align-items: center;
-    height: 400px;
-    width: 400px;
+    height: 450px;
+    width: 450px;
     border-radius: 100%;
     background-color: rgb(16, 17, 19);
-    font-weight: 600px;
-    font-size: 29px;
     color: #ececec;
     margin-bottom: 6rem;
     padding: 4rem;
@@ -59,19 +57,33 @@ body {
 }
 
 #borderColor {
+    position: absolute; 
+    top: 0; 
+    right: 0; 
+    opacity: 0; 
+    cursor: pointer; 
+}
+
+#colorIcon {
     position: absolute;
-    top: 15px;
-    right: 10px;
-    width: 60px; 
-    height: 45px; 
-    border: none; 
+    top: 25px;
+    right: 30px;
+    font-size: 38px;
     background: none; 
+    color:#bab6f1;
     cursor: pointer;
+}
+
+#colorIcon:hover {
+    font-size: 40px;
+    color:#a098f0;
 }
 
 #actions {
     display: flex;
     gap: 0.5rem;
+    align-items: center;
+    justify-content: space-evenly;
 }
 
 #actions button {
@@ -82,21 +94,16 @@ body {
     height: 75px;
     padding: .6rem;
     font-size: 1rem;
-    border-radius: 10px;
+    border-radius: 18px;
     border: none;
-    background-color: #e0dbdb;
+    background-color: #bab6f1;
     color: #151518;
     cursor: pointer;
     transition: background-color .2s ease-in;
 }
 
-#actions { 
-    align-items: center;
-    justify-content: space-evenly;
-}
-
 #actions button:hover {
-    background-color: #bbb7ec;
+    background-color: #a098f0;
 }
 
 #marks-list{
@@ -105,8 +112,41 @@ body {
     text-align: center;
     gap: 0.7rem;
     color: #a3b3e7;
+    max-height: 150px; 
+    overflow-y: auto; 
+    padding-top: 10px; 
+    margin-top: 15px;
+    border-radius: 8px;
 }
 
-#marks-list p:first-child {
-    margin-top: 1.8rem;
+#marks-list::-webkit-scrollbar {
+    width: 8px; 
+}
+
+#marks-list::-webkit-scrollbar-thumb {
+    background: #bbb7ec; 
+    border-radius: 10px; 
+}
+
+#marks-list::-webkit-scrollbar-thumb:hover {
+    background: #8880e0; 
+}
+
+#marks-list::-webkit-scrollbar-track {
+    background: none; 
+    border-radius: 10px; 
+}
+
+@media (max-width: 480px) {
+    
+    #timer {
+        width: 320px;
+        height: 320px;
+        font-size: 38px;
+    }
+
+    #actions button {
+        width: 65px;
+        height: 65px;
+    }
 }
