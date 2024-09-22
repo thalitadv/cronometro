@@ -58,8 +58,8 @@ body {
 
 #borderColor {
     position: absolute; 
-    top: 0; 
-    right: 0; 
+    top: 10px; 
+    right: 20px; 
     opacity: 0; 
     cursor: pointer; 
 }
